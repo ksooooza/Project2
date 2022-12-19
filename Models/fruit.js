@@ -5,13 +5,7 @@ const fruitSchema = new mongoose.Schema({
     genus: String,
     family: String,
     order: String,
-    nutrition: {
-        carbohydrates: Number,
-        protein: Number,
-        fat: Number,
-        calories: Number,
-        sugar: Number
-    }
+    nutrition: Object
 })
 
 export default mongoose.model("Fruit", fruitSchema)
