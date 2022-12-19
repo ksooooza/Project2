@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs.promises": "^0.1.2",
+    "mongoose": "^6.8.0",
+    "node-fetch": "^3.3.0"
+  },
+  "type": "module",
+  "name": "connection",
+  "version": "1.0.0",
+  "main": "connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
