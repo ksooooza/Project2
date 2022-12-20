@@ -37,12 +37,11 @@ app.post("/fruits", (req, res) => {
     Fruit.create(req.body).then(newFruit => {res.json(newFruit)})
 })
 
-//Update a fruit - does NOT work
-app.get("/fruits/id/:id", (req, res) => {
-    Fruit.findByIdAndUpdate(
-      req.params.id,
-      { $push: { items: req.body }},
-      { new: true }
+//Update a fruit - WORKS
+app.put("/fruits/update/id/:id/", (req, res) => {
+    Fruit.findOneAndUpdate(
+      {_id: req.params.id},
+      req.body,
     ).then(fruits => {
       res.json(fruits)
     })
