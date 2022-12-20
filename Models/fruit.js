@@ -1,3 +1,4 @@
+import { triggerAsyncId } from 'async_hooks'
 import mongoose from 'mongoose'
 
 const fruitSchema = new mongoose.Schema({
