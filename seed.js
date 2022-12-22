@@ -16,5 +16,5 @@ Fruit
     .deleteMany({})
     .then(() => Fruit.create(fruitData))
     .then(() => console.log("Done!"))
-    .then(() => mongoose.disconnect())
+    .then(() => connection.close())
     .catch(error => console.log("error", error))

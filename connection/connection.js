@@ -4,7 +4,7 @@ let mongooseConnectionConfig = { useNewUrlParser: true, useUnifiedTopology: true
 
 mongoose.set('strictQuery', true)
 
-const url = process.env.MONGO.url || 'mongodb://localhost:27017/fruity_db'
+const url = process.env.MONGO_URL || 'mongodb://localhost:27017/fruity_db'
 
 mongoose.connect(url, mongooseConnectionConfig)
 
