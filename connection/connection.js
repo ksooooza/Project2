@@ -4,7 +4,9 @@ let mongooseConnectionConfig = { useNewUrlParser: true, useUnifiedTopology: true
 
 mongoose.set('strictQuery', true)
 
-mongoose.connect('mongodb://localhost:27017/fruity_db', mongooseConnectionConfig)
+const url = process.env.MONGO.url || 'mongodb://localhost:27017/fruity_db'
+
+mongoose.connect(url, mongooseConnectionConfig)
 
 mongoose.connection.on('connected', ()=> console.log("Connected to database"))
 mongoose.connection.on('disconnected', ()=> console.log("Disconnected from database"))

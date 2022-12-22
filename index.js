@@ -4,12 +4,14 @@ import Fruit from "./Models/fruit.js"
 
 const app = express();
 app.use(express.json())
+const port = process.env.PORT || 3000
 
-app.listen(3000, () => console.log("App listening on port 3000"))
+app.listen(port, () => console.log(`App listening on port ${port}`))
 
 //Landing screen
 app.get('/',  (req, res) => {
-    res.send('Welcome to the Funky Fruity API')
+    //let grape = codePointAt(`U+1F347`);
+    res.send(`Welcome to the Funky Fruity API`)
 })
 
 //Root directory, lists all fruits
