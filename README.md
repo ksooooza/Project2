@@ -1,33 +1,40 @@
-WELCOME TO THE FUNKY FRUITY API
+# WELCOME TO THE FUNKY FRUITY API
 
 Have you ever wanted to know some fun info about the fruit that you are eating? Like maybe you want to know the family, genus, or order of the fruit? Or perhaps some nutritional information? Well now you can with the funkyfruityAPI.
 
 
 
-MODEL
+## MODEL
 
 Raw data taken from the Fruityvide API on the fruits can be found in the data folder in fruits.json
 
 This is the model for each fruit:
 
-const fruitSchema = new mongoose.Schema({
+```
+    const fruitSchema = new mongoose.Schema({
     name: String,
     genus: String,
     family: String,
     order: String,
     nutrition: Object
 })
+```
 
 
+---
+## ROUTES
 
-ROUTES
+**"http://localhost:3000" - landing page: Welcome to the Funky Fruity API**
 
-"http://localhost:3000" - landing page: Welcome to the Funky Fruity API
+<br>
 
-"http://localhost:3000/fruits" - shows all fruits
+---
+
+**"http://localhost:3000/fruits" - shows all fruits**
 
 Example of returned content: 
 
+```
 {
     "_id": "63a1e435cf381241fe82df65",
     "name": "Blueberry",
@@ -73,12 +80,18 @@ Example of returned content:
     },
     "__v": 0
 }
+```
 
-"http://localhost:3000/fruits/<fruit name>" - find a fruit by name
+<br>
 
-Example: http://localhost:3000/fruits/Durian* returns:
+---
 
-  {
+**"http://localhost:3000/fruits/[fruitName]" - find a fruit by name**
+
+Example: http://localhost:3000/fruits/Durian returns:
+
+  ```
+    {
     "_id": "63a1e435cf381241fe82df6a",
     "name": "Durian",
     "genus": "Durio",
@@ -93,13 +106,19 @@ Example: http://localhost:3000/fruits/Durian* returns:
     },
     "__v": 0
 }
-*NOTE: fruit names must be capitalized
+```
+NOTE: fruit names must be capitalized
 
-"http://localhost:3000fruits/id/<fruit id>" - find a fruit by ID
+ <br>
+    
+---
+    
+**"http://localhost:3000fruits/id/[fruitId]" - find a fruit by ID**
 
 Example: http://localhost:3000fruits/id/63a1e435cf381241fe82df71 returns:
 
-{
+```
+    {
     "_id": "63a1e435cf381241fe82df71",
     "name": "Guava",
     "genus": "Psidium",
@@ -112,45 +131,63 @@ Example: http://localhost:3000fruits/id/63a1e435cf381241fe82df71 returns:
       "calories": 68,
       "sugar": 9
 }
+```
 
-"http://localhost:3000/fruits" - add a new fruit to the database
+<br>
+    
+---
+    
+**"http://localhost:3000/fruits" - add a new fruit to the database**
 
 Use an API platform such as postman to make a post request to add an entry to the database at this route. The new entry must have raw JSON in the body, and must follow the same format as the fruit Model.
 
 Example:
+ ![image](https://media.git.generalassemb.ly/user/46190/files/2157adee-7017-4b5e-9700-b7fa5c42f020)
 
-"http://localhost:3000/fruits/update/id/<fruit id>" - update a fruity entry
+<br>
+    
+---
+    
+**"http://localhost:3000/fruits/update/id/[fruitId]" - update a fruity entry**
 
 Use an API platform such as postman to make a post request to update an entry in database at this route. You do not have to populate every property/value pair, but the ones that you do update have to follow the format of the fruit Model.
 
 Example:
+    ![image](https://media.git.generalassemb.ly/user/46190/files/130a8a39-278c-4f4a-88bc-930184b61d1e)
 
-"http://localhost:3000/fruits/<fruit id>" - delete a fruit from the API using it's ID
+ <br>
+    
+---
+    
+**"http://localhost:3000/fruits/[fruitId]" - delete a fruit from the API using it's ID**
 
 Use an API platform such as postman to make a delete request to delete an entry in database at this route. 
 
 Example:
+![image](https://media.git.generalassemb.ly/user/46190/files/63f5467d-e021-46f9-9a3e-e8e8b58a094a)
 
+<br>
 
+---
 
-FUTURE UPDATES
+## FUTURE UPDATES
 
 1. Add images to each entry - I considered adding image URLs to this API, however I think it would be better to have an actual image pop up with each entry. From what I read, you really couldn't do this without a front end to your API, so I would add this feature in after I built a front end.
 2. On that note, building a front end for this API.
 
 
 
-CREDITS AND SOURCES
+## CREDITS AND SOURCES
 
-https://www.fruityvice.com/ - the Fruityvice API for source data
-https://www.fruityvice.com/doc/index.html - documentation for the Fruityvice API
+- https://www.fruityvice.com/ - the Fruityvice API for source data
+- https://www.fruityvice.com/doc/index.html - documentation for the Fruityvice API
 
 
 
-SKILLS AND TOOLS USED
+## SKILLS AND TOOLS USED
 
-MongoDB, Mongoose, Express
-Routing, Postman, CRUD
-JSON, JavaScript, Node
-Data modeling and Schemas
-Database Seeding
+- MongoDB, Mongoose, Express
+- Routing, Postman, CRUD
+- JSON, JavaScript, Node
+- Data modeling and Schemas
+- Database Seeding
