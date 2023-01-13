@@ -1,8 +1,10 @@
 import connection from "./connection/connection.js"
 import express from "express"
 import Fruit from "./Models/fruit.js"
+import cors from "cors"
 
 const app = express();
+app.use(cors())
 app.use(express.json())
 const port = process.env.PORT || 3000
 
