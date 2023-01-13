@@ -24,13 +24,13 @@ This is the model for each fruit:
 ---
 ## ROUTES
 
-**"http://localhost:3000" - landing page: Welcome to the Funky Fruity API**
+**"https://project2-production.up.railway.app" - landing page: Welcome to the Funky Fruity API**
 
 <br>
 
 ---
 
-**"http://localhost:3000/fruits" - shows all fruits**
+**"https://project2-production.up.railway.app/fruits" - shows all fruits**
 
 Example of returned content: 
 
@@ -86,9 +86,9 @@ Example of returned content:
 
 ---
 
-**"http://localhost:3000/fruits/[fruitName]" - find a fruit by name**
+**"https://project2-production.up.railway.app/fruits/[fruitName]" - find a fruit by name**
 
-Example: http://localhost:3000/fruits/Durian returns:
+Example: https://project2-production.up.railway.app/fruits/Durian returns:
 
   ```
     {
@@ -113,9 +113,9 @@ NOTE: fruit names must be capitalized
     
 ---
     
-**"http://localhost:3000fruits/id/[fruitId]" - find a fruit by ID**
+**"https://project2-production.up.railway.app/fruits/id/[fruitId]" - find a fruit by ID**
 
-Example: http://localhost:3000fruits/id/63a1e435cf381241fe82df71 returns:
+Example: https://project2-production.up.railway.app/fruits/id/63a1e435cf381241fe82df71 returns:
 
 ```
     {
@@ -137,7 +137,7 @@ Example: http://localhost:3000fruits/id/63a1e435cf381241fe82df71 returns:
     
 ---
     
-**"http://localhost:3000/fruits" - add a new fruit to the database**
+**"https://project2-production.up.railway.app/fruits" - add a new fruit to the database**
 
 Use an API platform such as postman to make a post request to add an entry to the database at this route. The new entry must have raw JSON in the body, and must follow the same format as the fruit Model.
 
@@ -148,7 +148,7 @@ Example:
     
 ---
     
-**"http://localhost:3000/fruits/update/id/[fruitId]" - update a fruity entry**
+**"https://project2-production.up.railway.app/fruits/update/id/[fruitId]" - update a fruity entry**
 
 Use an API platform such as postman to make a post request to update an entry in database at this route. You do not have to populate every property/value pair, but the ones that you do update have to follow the format of the fruit Model.
 
@@ -159,7 +159,7 @@ Example:
     
 ---
     
-**"http://localhost:3000/fruits/[fruitId]" - delete a fruit from the API using it's ID**
+**"https://project2-production.up.railway.app/fruits/[fruitId]" - delete a fruit from the API using it's ID**
 
 Use an API platform such as postman to make a delete request to delete an entry in database at this route. 
 
