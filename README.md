@@ -6,7 +6,7 @@ Have you ever wanted to know some fun info about the fruit that you are eating? 
 
 ## MODEL
 
-Raw data taken from the Fruityvide API on the fruits can be found in the data folder in fruits.json
+Raw data taken from the Fruityvice API on the fruits can be found in the data folder in fruits.json
 
 This is the model for each fruit:
 
